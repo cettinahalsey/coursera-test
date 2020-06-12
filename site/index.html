@@ -2,9 +2,34 @@
 <html>
 <head>
 	<title>Hello Coursera!</title>
+	<style>
+		*  {box-sizing: border-box;}
+		a  { 	color:black; }
+		h1 { 	color:red; }
+		section {  				
+  				width: 50%;
+  				border: 1px solid black;
+  				float: left;
+  				clear:right;
+  				padding: 10px;
+		   }
+		   li {
+  				list-style: none;
+  				text-align: left;
+  				background-color: pink;
+  				opacity: .3;
+  				font-weight: bolder;
+  				font-family: Impact, Black, sans-serif;
+  			}
+  				
+  				
+		   div {background-color: #00FFFF;}
+		   section.sect {background-color: grey;}
+		   section.ref {background-color: pink;}
+	</style>
 </head>
 <body>
-<h1>Hello Coursera! It's a great course!</h1>
+<h1>Hello Coursera! It's a really great course!</h1>
 <p>
       Let's link to a Facebook Fan page I created for this course!
       <!-- link to Facebook page WITH TARGET-->
@@ -18,6 +43,7 @@
 	</a>
 </h2>
 <h1 id="top">Links to Sections of The Same Page</h1>
+  
   <section>
     <ul>
       <!-- Link to every section in the page -->
@@ -29,23 +55,58 @@
     </ul>
 
   </section>
+  <section>
+    <ul>
+      <!-- Link to every ref in the page -->
+      <li><a href="#ref1">#ref1</a></li>
+      <li><a href="#ref2">#ref2</a></li>
+      <li><a href="#ref3">#ref3</a></li>
+      <li><a href="#ref4">#ref4</a></li>
+      
+    </ul>
 
-  <section id="section1">
+  </section>
+
+  <section id="section1" class="sect">
     <h3> Section 1</h3>
     <p>AAA</p><p>AAA</p><p>AAA</p><p>AAA</p><p>AAA</p>
   </section>
-   <section id="section2">
+   <section id="ref1" class="ref">
+    <h3> Ref 1</h3>
+    <p>AAA</p><p>AAA</p><p>AAA</p><p>AAA</p><p>AAA</p>
+  </section>
+   <section id="section2" class="sect">
     <h3> Section 2</h3>
     <p>BBB</p> <p>BBB</p><p>BBB</p><p>BBB</p><p>BBB</p>
   </section>
-   <section id="section1">
+   <section id="ref2" class="ref">
+    <h3> Ref 2</h3>
+    <p>BBB</p> <p>BBB</p><p>BBB</p><p>BBB</p><p>BBB</p>
+  </section>
+   <section id="section3" class="sect">
     <h3> Section 3</h3>
     <p>CCC</p> <p>CCC</p><p>CCC</p><p>CCC</p><p>CCC</p>
   </section>
-   <section id="section4">
+  <section id="ref3" class="ref">
+    <h3> Ref 3</h3>
+    <p>CCC</p> <p>CCC</p><p>CCC</p><p>CCC</p><p>CCC</p>
+  </section>
+   <section id="section4" class="sect">
     <h3> Section 4</h3>
     <p>DDD</p><p>DDD</p><p>DDD</p><p>DDD</p><p>DDD</p>
   </section>
+ <section id="ref4" class="ref">
+    <h3> Ref 4</h3>
+   <p>DDD</p><p>DDD</p><p>DDD</p><p>DDD</p><p>DDD</p>
+  </section>
+  
+<h2>Now I learn about responsive design:
+	<a href="ResponsiveDesign.html" title="Responsive Design example.">
+		<div>Responsive Design Example</div>
+	</a>
+</h2>  
+  
+  
   <div>
   	<a href="#top" title="Back to the top">Back to the beginning again</a>
   </div>
