@@ -1,0 +1,210 @@
+body {
+  font-size: 16px;
+  color: #fff;
+  background-color: #7afffa;
+  font-family: 'Oxygen', sans-serif;
+}
+
+/** HEADER **/
+#header-nav {
+  position: relative;
+  background-color: #ffb8e1;
+  border-radius: 0;
+  border: 1px solid black;
+}
+.navbar-header{
+  position: absolute;
+  left: 5%;
+  bottom: auto;
+
+}
+.navbar-brand h1 { /* Restaurant name */
+  font-family: 'Lora', serif;
+  color: #615eff;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #222;
+  margin-top: 0;
+  line-height: .75;
+}
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+
+#collapsable-nav{
+  margin: 0;
+  width: 100%;
+  clear: both; 
+  border: none;
+  overflow: hidden;
+}
+
+#nav-list a {
+  color: white;
+  text-align: center;
+  border: 1px solid white;
+}
+#nav-list a:hover {
+  background: #d9e3ed;
+}
+#nav-list a span {
+  font-size: 1.8em;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid #7afffa;
+}
+
+/* END HEADER */
+
+
+/* SINGLE CATEGORY PAGE */
+.row{
+    box-sizing: border-box;
+   
+}
+#menu-categories-title
+{    
+    color: blue;
+}
+#menu-item-tile {
+  box-sizing: border-box;
+  background: blue;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.menu-item-tile hr {
+  width: 80%;
+}
+
+.menu-item-tile .menu-item-price span {
+  font-size: .6em;
+}
+#chicken, #beef, #sushi {
+      border: 1px solid black;
+      background: #ffb8e1;
+}
+.menu-item-description {
+  padding-right: 25px;
+  padding-bottom: 30px;
+  color: blue;
+  overflow: auto;
+
+}
+h3.menu-item-title {
+  margin: 20px;
+  color: blue;
+  text-align: center;
+}
+.menu-item-details {
+  font-size: .9em;
+  font-style: italic;
+  margin-left: 5%;
+}
+/* END SINGLE CATEGORY PAGE */
+
+
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Header */
+  .navbar-brand {
+    padding-top: 10%;
+    height: 80%;
+  }
+  /* End Header */
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+ /* Header */
+  .navbar-brand {
+    padding-top: 10%;
+    height: 75%;
+  } 
+  /* End Header */
+  
+ /* Home Page */
+ .menu-item-tile{
+      width:94%;
+      margin-right: 3%;
+      margin-left: 3%;
+  }
+.menu-item-details {  
+  text-align: left;
+}
+#menu-item-tile {
+  padding-bottom: 10px;
+}
+  /* End Home Page */
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+  /* Header */
+  .navbar-nav {
+   margin-bottom:0;
+  }
+  
+  .navbar-brand {
+    padding-top: 10%;
+    height: 80%;
+  }
+  .navbar-brand h1 { /* Restaurant name */
+   /* padding-top: 10px;*/
+    font-size: 4vw; /* 1vw = 1% of viewport width */
+  }
+
+  #collapsable-nav a { /* Collapsed nav menu text */
+    font-size: 1.2em;
+  }
+  #collapsable-nav a span { /* Collapsed nav menu glyph */
+    font-size: 1em;
+    margin-right: 5px;
+  }
+
+  /* End Header */
+  
+  /* Footer */
+  .panel-footer section {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .panel-footer section:nth-child(3) {
+    margin-bottom: 0; /* margin already exists on the whole row */
+  }
+  .panel-footer section hr {
+    width: 50%;
+  }
+  /* End Footer */
+  
+    /* Home Page */
+
+  /* For this size to have the picture look nice */
+  #menu-tile, #specials-tile {
+    width: 360px;
+    margin: 0 auto 15px auto;
+  }
+  .menu-item-tile{
+      width:90%;
+      margin-right: 5%;
+      margin-left: 5%;
+  }
+  .menu-item-photo {
+    margin-right: auto;
+  }
+  .menu-item-tile .menu-item-price {
+    text-align: center;
+  }
+  menu-item-details {  
+  text-align: left;
+}
+#menu-item-tile {
+  padding-bottom: 10px;
+}
+}
+
