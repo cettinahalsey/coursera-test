@@ -1,14 +1,14 @@
 body {
   font-size: 16px;
   color: #fff;
-  background-color: #7afffa;
+  background-color: #61122f;
   font-family: 'Oxygen', sans-serif;
 }
 
 /** HEADER **/
 #header-nav {
   position: relative;
-  background-color: #ffb8e1;
+  background-color: #f6b319;
   border-radius: 0;
   border: 1px solid black;
 }
@@ -20,7 +20,7 @@ body {
 }
 .navbar-brand h1 { /* Restaurant name */
   font-family: 'Lora', serif;
-  color: #615eff;
+  color: #557c3e;
   font-size: 1.5em;
   text-transform: uppercase;
   font-weight: bold;
@@ -46,37 +46,30 @@ body {
   border: 1px solid white;
 }
 #nav-list a:hover {
-  background: #d9e3ed;
+  background: #E7E7E7;
 }
 #nav-list a span {
   font-size: 1.8em;
 }
 
 .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
-  border: 1px solid #7afffa;
+  border: 1px solid #61122f;
 }
 
 /* END HEADER */
 
 
 /* SINGLE CATEGORY PAGE */
-.row{
-    box-sizing: border-box;
-   
+.menu-item-tile {
+  margin-bottom: 25px;
+  margin-top: 25px;
+  background-color: #f6b319;
 }
-#menu-categories-title
-{    
-    color: blue;
-}
-#menu-item-tile {
-  box-sizing: border-box;
-  background: blue;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 12px;
-  padding-right: 12px;
-}
-
+.menu-item-tile{
+      width:90%;
+      margin-right: 5%;
+      margin-left: 5%;
+  }
 .menu-item-tile hr {
   width: 80%;
 }
@@ -84,20 +77,14 @@ body {
 .menu-item-tile .menu-item-price span {
   font-size: .6em;
 }
-#chicken, #beef, #sushi {
-      border: 1px solid black;
-      background: #ffb8e1;
-}
+
 .menu-item-description {
   padding-right: 25px;
   padding-bottom: 30px;
-  color: blue;
   overflow: auto;
-
 }
 h3.menu-item-title {
   margin: 20px;
-  color: blue;
   text-align: center;
 }
 .menu-item-details {
@@ -136,9 +123,6 @@ h3.menu-item-title {
   }
 .menu-item-details {  
   text-align: left;
-}
-#menu-item-tile {
-  padding-bottom: 10px;
 }
   /* End Home Page */
 }
@@ -202,9 +186,6 @@ h3.menu-item-title {
   }
   menu-item-details {  
   text-align: left;
-}
-#menu-item-tile {
-  padding-bottom: 10px;
 }
 }
 
