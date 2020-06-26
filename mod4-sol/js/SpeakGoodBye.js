@@ -21,7 +21,7 @@ var speakWord = "Good Bye";
   
   //document.writeln(speakWord + " " + name + "<br>");
   //console.log(speakWord + " " + name + "<br>");
-  return (speakWord + " " + name + "<br>");
+  return (speakWord + " " + name + "<br>"+ "<br>");
 }
 
 // STEP 9: Expose the 'byeSpeaker' object to the global scope. Name it
