@@ -120,7 +120,7 @@ body {
   border: 2px solid #3F0C1F;
 }
 
-#menu-tile, #specials-tile, #map-tile {
+#menu-tile, #info-tile, #map-tile {
   height: 250px;
   width: 100%;
   margin-bottom: 15px;
@@ -128,7 +128,7 @@ body {
   border: 2px solid #3F0C1F;
   overflow: hidden;
 }
-#menu-tile:hover, #specials-tile:hover, #map-tile:hover {
+#menu-tile:hover, #info-tile:hover, #map-tile:hover {
   box-shadow: 0 1px 5px 1px #cccccc;
 }
 
@@ -136,12 +136,12 @@ body {
   background: url('../images/servizi.jpg') no-repeat;
   background-position: center;/* takes care of the shrinking */
 }
-#specials-tile {
-  background: url('../images/Morgantini.png') no-repeat;
+#info-tile {
+  background: url('../images/Informazioni.png') no-repeat;
   background-position: center;/* takes care of the shrinking */
 }
 
-#menu-tile span, #specials-tile span, #map-tile span {
+#menu-tile span, #info-tile span, #map-tile span {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -380,3 +380,4 @@ h3.menu-item-title {
     width: 100%;
   }
 }
+
