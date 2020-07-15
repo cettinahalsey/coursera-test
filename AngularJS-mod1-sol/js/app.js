@@ -19,6 +19,7 @@ function LMController ($scope) {
       var count = list.length;
       for( var i =0; i<list.length; i++)
       {
+          list[i] = list[i].trim();
           if(list[i].length===0)count--;
       }
       if(count===0)
