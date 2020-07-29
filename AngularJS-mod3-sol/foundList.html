@@ -1,0 +1,12 @@
+<h3 ><br><br><div ng-if="controller.show(0) !== 0">{{ controller.myTitle }}</div></h3>
+
+<ol>
+  <li ng-repeat="item in controller.found">
+      <button ng-click="controller.onRemove({index: $index});">
+        Remove Item</button>
+     {{item.shortName}} - {{item.name}} - {{item.description}}
+       
+  </li>
+</ol>
+
+ 
