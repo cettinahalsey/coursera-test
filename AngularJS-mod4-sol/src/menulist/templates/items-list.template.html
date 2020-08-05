@@ -1,0 +1,16 @@
+
+<a ui-sref="home">Home</a> 
+
+<h3>Listing the items in the  {{itemsList.category}} category</h3>
+
+<loading-spinner></loading-spinner>
+
+<ul>
+    <li ng-repeat="item in itemsList.citems"  ui-sref="mainList.itemDetail/({itemId: $index})" >
+     {{ item.id }} - {{ item.shortName }} - {{ item.name }} - {{ item.description }}
+  </li>
+</ul>
+
+<a ui-sref="mainList">If you did not find what you wanted, please check our other categories!</a>
+<ui-view></ui-view>
+
