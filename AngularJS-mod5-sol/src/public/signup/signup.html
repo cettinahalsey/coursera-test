@@ -1,0 +1,152 @@
+    <h1>Sign Up for our newsletter!</h1>
+    <h2>We would love to keep in touch with you!</h2>
+ 
+
+    <fieldset>
+      <legend>Registration</legend>
+      <form name='signupForm' novalidate>
+
+        <input type="text" name="firstname" placeholder="First name"
+          ng-model="signup.user.firstname" 
+          required
+          ng-minlength="1"
+          ng-maxlength="10">
+      <!--- {{ signup.user.firstname }}{{  signup.firstname.$error.required }}-->
+          <span id="errormess"
+            ng-if="(signupForm.firstname.$error.required) && signupForm.firstname.$touched">
+            First name is required
+          </span>
+          <span id="errormess"
+            ng-if="signupForm.firstname.$error.maxlength && signupForm.firstname.$touched">
+            First name must not be longer than 10 characters
+          </span>
+         <span id="errormess"
+            ng-if="signupForm.firstname.$error.minlength && signupForm.firstname.$touched">
+            First name must  be longer than 1 character
+          </span>
+        
+          <br>
+          
+          <input type="text" name="lastname" placeholder="Last name"
+          ng-model="signup.user.lastname"
+          required
+          ng-maxlength="10">
+          <!--- {{ signup.user.lastname }}{{ signup.lastname.$error.required }} -->
+          <span id="errormess"
+            ng-if="(signupForm.lastname.$error.required) && signupForm.lastname.$touched">
+            Last name is required
+          </span>
+          <span id="errormess"
+            ng-if="signupForm.lastname.$error.maxlength && signupForm.lastname.$touched">
+            Last name must not be longer than 10 characters
+          </span>
+          <br>
+          
+          
+    
+
+        <input type="text" name="phone" placeholder="Phone ###-###-####"
+          ng-model="signup.user.phone"
+          pattern="(\d{3})-(\d{3})-(\d{4})">
+          <span id="errormess"
+            ng-if="signupForm.phone.$invalid && signupForm.phone.$touched">
+            Phone must be in the format ###-###-####.
+          </span>
+          <br>
+ 
+          
+          <input type="email" name="email" placeholder="Email"
+          ng-model="signup.user.email"
+          required>
+        <!--- {{ signup.email.$invalid }} -->
+          <span id="errormess"
+            ng-if="signupForm.email.$invalid && signupForm.email.$touched">
+            Must be a valid email address: handle@domain format
+          </span>
+          <br>
+ 
+ <!-------------------------------------------------------------------------------------->
+ 
+          <input id="favor" type="text" name="favorite" placeholder="Your favorite dish number?"
+                 ng-model="signup.user.favorite"  ui-validate="signup.checkFavorite(signup.user.favorite)"
+          required>
+          <button ng-click="signup.checkFavorite()">Check</button> 
+         
+         <span id="errormess"
+            ng-if="signupForm.favorite.$error.required && signupForm.favorite.$touched">
+            Please tell us your favorite dish
+          </span>
+         <span id="errormess"
+            ng-if="!signupForm.favorite.$error.required || !signupForm.favorite.$touched">
+          </span>
+         
+          <span id="errorNoSuch"
+            ng-if="signupForm.favorite.$error.nosuch && signup.favoriteChecked">
+            No such item in the menu.<br>
+             </span>
+         <!-----
+         <span id="errorNoSuch"
+            ng-if="!signupForm.favorite.$error.nosuch && signup.favoriteChecked && !signupForm.favorite.$error.required" >
+             Good choice!
+             </span>
+         -->
+         <br>
+         <span id="help">
+             First name, last name, email and favorite dish are required. 
+             <br>
+             Format for the favorite dish is as in the menu, category letter followed by a number, no spaces.
+             <br>
+             You can use the "Check" button to verify that your choice is valid. An error message will appear if it is not.
+             <br>
+             When you are done please press the "Submit" button.
+             <br>
+             If your information is valid a confirmation will appear on this page detailing your data.
+             <br>
+             Then you will be registered for special events and we will keep you updated with our newsletter.
+         </span>
+         <br>
+<!--  <code>Error: signupForm.favorite.$error = {{signupForm.favorite.$error}}</code><br>
+  <code>Error: signupForm.favorite.$valid = {{signupForm.favorite.$valid}}</code><br>
+  <code>Error: signupForm.favorite.$touched = {{signupForm.favorite.$touched}}</code><br>
+  <code>Error: signupForm.favorite.$invalid  = {{signupForm.favorite.$invalid}}</code><br> -->
+         
+          
+          <span id="errorNoSuch"
+            ng-if="!signupForm.favorite.$error.nosuch">
+              <br>
+<!--  <code>No error: signupForm.favorite.$error = {{signupForm.favorite.$error}}</code><br>
+  <code>No error: signupForm.favorite.$valid = {{signupForm.favorite.$valid}}</code><br>
+  <code>No error: signupForm.favorite.$touched = {{signupForm.favorite.$touched}}</code><br>
+  <code>No error: signupForm.favorite.$invalid  = {{signupForm.favorite.$invalid}}</code><br> -->
+          </span>
+          <br>
+         
+      
+          
+         <button
+          ng-disabled="signupForm.$invalid"
+          ng-click="signup.submit()">Submit</button>
+
+          <div style="margin-top: 10px;">
+          <!---   Form valid? {{ signupForm.$valid }} -->
+          </div>
+          
+          <button ng-click="signup.reset()">Reset all</button>
+          <span><button ng-click="signup.resetFavorite()">Reset favorite</button></span>
+      </form>
+    </fieldset>
+
+    <div id="info" ng-if="signup.completed">
+      Your info as been saved as:<br>
+      Name: {{ signup.user.firstname}}&nbsp;{{ signup.user.lastname}} <br>
+      Email: {{ signup.user.email}} <br>
+      Phone: {{ signup.user.phone }} <br>
+      Favorite dish: {{ signup.user.favorite }} <br>
+    </div>
+    
+    
+   
+
+    
+    
+     

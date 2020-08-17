@@ -1,0 +1,21 @@
+<!--
+<h1>Yum!</h1>
+{{menuItemsCtrl.menuItems | json}}
+
+menuItemsCtrl.menuItems.category is what comes back from the resolve
+-->
+
+
+
+<div class="container">
+  <h2 id="menu-categories-title" class="text-center">{{menuItemsCtrl.menuItems.category.name}} Menu</h2>
+  <div class="text-center">{{menuItemsCtrl.menuItems.category.special_instructions}}</div>
+
+  <menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item = "menuItem"></menu-item>
+  </div>
+
+<!-- 
+In the tag <menu-item
+            menu-item is the attribute that must match category in bindings in  menu-item.component.js (gets normalized)
+            "menuItem"> must match menuItem in the loop variable
+      -->
